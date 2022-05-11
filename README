@@ -1,0 +1,98 @@
+README
+
+ INFO ABT THE STUFF
+ 
+
+
+CWD:
+
+data_prep.py: 
+
+calls prep_utils and mask_maker in the data prep directory of the src  directory. Either splits an image and csv folder with all orgin info into a test and train dir and then precedes rto organize the training information inwith the several outputs found in mask_mker. OR given specific instructions will only preform a part of these functions on information in the data/img_orgin folder, data/img_orgin/Test folder, or data/img_orgin/Train folder
+
+	args:
+	returns:
+
+	help:
+	
+
+	CWD/SRC/data_prep:
+
+		Prep_utils:
+		
+		preforms skipy test train split on image and csv annotations and saves them to 			the disk so that each new directory can be independanlty referenced.
+		
+		Mask_mker:
+		
+		preforms tranformations to input image data and saves it to the diskk. used to 			create ground truth training data from csv annotation in order to train a custom 			model for semantic segmentation tasks. 
+		
+			- mask_info
+			
+				args taken:
+				returns:
+				
+				help: 
+				
+			
+			- mk_binary_mask
+			
+				args taken:
+				returns:
+				
+				help:
+			
+			- mk_color_mask
+			
+				args taken:
+				returns:
+				
+				help:
+				
+			- mk_textmask
+				
+				args taken:
+				returns:
+				
+				help:
+			
+			- mk_gag_mask
+				
+				args taken:
+				returns:
+				
+				help:
+			
+		 	- mk_gag_textmask
+				
+				args taken:
+				returns:
+				
+				help:
+			
+	
+train.py:
+
+call on iscripts from the src/train/ folder. used for laoding, training and showing some training visualizations for training a sematic segmentation model from the resnet50 weights using a deeplabv3 nn.
+
+	args:
+	returns:
+	- model.torch to to be saved to disk for preds
+	- plt with train and eval plt
+	
+	
+	help:
+	
+	CWD/src/test_train:
+	
+		dataloader:
+		
+		test:
+		
+		show:
+		
+		
+	
+
+
+
+

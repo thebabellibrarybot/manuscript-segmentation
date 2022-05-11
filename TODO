@@ -1,0 +1,6 @@
+- make new dataset folder with larger dataset
+- prepare data into the following types
+- make version with and without gagussian blur and with square and with specific outlines
+- rest each with a rotation of epochs, batch size and lr and transformations
+
+
